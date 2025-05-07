@@ -1,9 +1,15 @@
-// Uncomment the code below and write your tests
-// import { simpleCalculator, Action } from './index';
+import { simpleCalculator, Action } from './index';
 
 describe('simpleCalculator tests', () => {
+  const a = 10;
+  const b = 5;
   test('should add two numbers', () => {
-    // Write your test here
+    const calcInput = { a, b, action: Action.Add };
+    const expectedOutput = calcInput.a + calcInput.b;
+
+    const result = simpleCalculator(calcInput);
+
+    expect(result).toBe(expectedOutput);
   });
 
   test('should subtract two numbers', () => {
